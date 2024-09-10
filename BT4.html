@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng Điểm Của Em</title>
+    <script src="scriptDiem.js"></script>
+    <style>
+      .container {
+        background-color: #c9c1c1;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px; /* Mở rộng kích thước để có đủ không gian cho sắp xếp nằm ngang */
+      }
+      #grade-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .field-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      label {
+        width: 150px; /* Đặt chiều rộng cố định cho nhãn */
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        width: 100px;
+        height: 40px;
+        margin: 5px;
+        font-size: 18px;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bảng Điểm Của Em</h1>
+      <form id="grade-form">
+        <div class="field-container">
+          <label for="semester1">Semester 1:</label>
+          <input type="number" id="semester1" name="semester1" />
+        </div>
+
+        <div class="field-container">
+          <label for="semester2">Semester 2:</label>
+          <input type="number" id="semester2" name="semester2" />
+        </div>
+
+        <div class="field-container">
+          <label for="year">Year:</label>
+          <input type="text" id="year" name="year" />
+        </div>
+
+        <div class="field-container">
+          <label for="average">Summarise:</label>
+          <input type="text" id="average" name="average" readonly />
+        </div>
+
+        <p class="result" id="result"></p>
+        <button type="button" onclick="calculateAverage()">OK</button>
+        <button type="button" onclick="resetForm()">Cancel</button>
+      </form>
+    </div>
+
+    <script src="scriptbt4.js"></script>
+  </body>
+</html>

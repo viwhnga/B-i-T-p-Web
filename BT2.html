@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Click the button to display a time base greeting:</p>
+    <input type="number" name="" id="nhap" />
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var number = document.getElementById("nhap").value;
+        var greeting;
+        if (number == 0) {
+          greeting = "Ban duoc 0 diem";
+          document.getElementById("demo").style.color = "red";
+        } else if (number > 0) {
+          greeting = "Do la so duong";
+          document.getElementById("demo").style.color = "blue";
+        } else {
+          greeting = "Day la so am";
+          document.getElementById("demo").style.color = "pink";
+        }
+        document.getElementById("demo").innerHTML = greeting;
+      }
+    </script>
+  </body>
+</html>

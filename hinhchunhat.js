@@ -1,0 +1,10 @@
+// alert("Welcome");
+// var a = prompt("Input price:", "0");
+// alert(a);
+// var status = confirm("Do you want to play?");
+// alert(status);
+var cd = prompt("Nhập chiều dài :");
+var cr = prompt("Nhập chiều rộng :");
+var dt = cd * cr;
+document.write(dt);
+document.getElementById("kq").innerHTML = dt;

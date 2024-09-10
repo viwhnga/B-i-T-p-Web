@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng Điểm Của Em</title>
+    <script src="scriptDiem.js"></script>
+    <style>
+      body {
+        text-align: center;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background-color: #d5d0d0;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h2 {
+        color: rgb(9, 9, 10);
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      label {
+        width: 30%;
+        text-align: left;
+        font-size: 18px;
+      }
+      .input-field {
+        width: 65%;
+        height: 40px;
+        font-size: 18px;
+        box-sizing: border-box;
+      }
+      input[type="number"],
+      select {
+        height: 40px;
+      }
+      select {
+        color: red;
+      }
+      input[readonly] {
+        background-color: #f0f0f0;
+      }
+      .result {
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .buttons {
+        text-align: center;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        margin: 5px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="bangdiem">BẢNG ĐIỂM CỦA EM</h2>
+      <form>
+        <div class="form-group">
+          <label for="semester1">Semester1:</label>
+          <input type="number" id="semester1" class="input-field" />
+        </div>
+
+        <div class="form-group">
+          <label for="semester2">Semester2:</label>
+          <input type="number" id="semester2" class="input-field" />
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year:</label>
+          <select id="year" class="input-field">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="summarise">Summarise:</label>
+          <input type="text" id="summarise" class="input-field" readonly />
+        </div>
+
+        <p class="result" id="result"></p>
+
+        <div class="buttons">
+          <button type="button" onclick="calculate()">OK</button>
+          <button type="button" onclick="resetForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
