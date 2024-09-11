@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Product</title>
+    <link rel="stylesheet" href="bt1.css" />
+  </head>
+  <body>
+    <h1>New Product</h1>
+    <form name="productForm">
+        <p>
+            <label for="pname">Product Name</label>
+            <input type="text" name="pname" id="pname"/>
+        </p>  
+        <p>
+            <label for="qty">Quantity</label>
+            <input type="number" name="qty" id="qty"/>
+        </p>
+            <label for="up">Unit Price</label>
+            <input type="number" name="up" id="up"/>
+        <p>
+            <label for="dc">Discount</label>
+            <input type="number" name="dc" id="dc"/>
+        </p>
+            <button type="button" onclick="sell()">Sell</button>
+            <button type="button" onclick="cancel()">Cancel</button>
+        </p>
+    </form>
+    <table id="tbl">
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Discount</th>
+        <th>Subtotal</th>
+      </tr>
+    </table>
+    <script src="bt1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Management</title>
+    <link rel="stylesheet" href="bt2.css">
+  </head>
+  <body>
+    <div class="form-group">
+      <label>Product Name</label>
+      <input type="text" id="productName" />
+    </div>
+
+    <div class="form-group">
+      <label>Product Quantity</label>
+      <input type="number" id="productQuantity" />
+    </div>
+
+    <div class="form-group">
+      <label>Product Price</label>
+      <input type="number" id="productPrice" />
+    </div>
+
+    <button onclick="addProduct()">Add</button>
+    <table id="productTable", border="1" style="width: 30%;">
+        <!-- thead để thêm một header tới một bảng. -->
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Sub-total</th>
+        </tr>
+      </thead>
+      <!-- thẻ tbody để thêm một phần thân vào một bảng -->
+      <tbody> 
+    </table>
+      </tbody>
+    </table>
+    <div class="total">Total: <span id="totalAmount">0</span>$</div>
+
+    <script src="bt2.js"></script>
+  </body>
+</html>
